@@ -9,7 +9,7 @@ class SvgIcon extends StatelessWidget {
   final double? width;
   final double? height;
 
-  final Color? color;
+  final Color? color ;
 
   const SvgIcon(this.assetName, {Key? key, this.width, this.height, this.color}) : super(key: key);
 
@@ -20,7 +20,7 @@ class SvgIcon extends StatelessWidget {
       assetName,
       width: width ?? theme.size,
       height: height ?? theme.size,
-      color: color ?? theme.color
+      colorFilter:ColorFilter.mode(color?? Colors.grey.shade800, BlendMode.srcIn),
     );
   }
 }
